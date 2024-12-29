@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMovieHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <button id="homeButton" class="home-button">🏠 Home</button>
+            <h1>Welcome to myMovieHub</h1>
+            <p>Discover movies of all genres.</p>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for movies..." />
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="moviesSection">
+        <div id="loader" class="hidden">
+            <img src="assets/loader.gif" alt="Loading..." />
+            Loading...
+        </div>
+        <div id="moviesContainer"></div>
+    </section>
+
+    <section id="searchHistorySection">
+        <h3>Recent Searches</h3>
+        <div id="searchHistory"></div>
+        <button id="clearHistoryButton">Clear History</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
