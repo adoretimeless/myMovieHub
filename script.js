@@ -148,7 +148,11 @@ async function showMovieDetails(imdbID) {
   }
 }
 
-// Home button functionality (scroll to top)
+// Home button functionality (scroll to top and reset content)
 homeButton.addEventListener('click', () => {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0); // Scroll to top of the page
+  fetchLatestMovies(); // Fetch and display the latest movies (reset content)
+  searchInput.value = ''; // Clear the search input field
+  moviesContainer.innerHTML = ''; // Clear the movie results
+  displaySearchHistory(); // Display search history
 });
